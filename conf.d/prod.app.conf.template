@@ -76,7 +76,7 @@ server {
                 proxy_set_header X-Prerender-Token ${PRERENDER_TOKEN};
       
                 set $prerender 0;
-                if ($http_user_agent ~* "googlebot|bingbot|yandex|baiduspider|twitterbot|facebookexternalhit|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest\/0\.|pinterestbot|slackbot|vkShare|W3C_Validator|whatsapp") {
+                if ($http_user_agent ~* "googlebot|yahoo!\ slurp|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest\/0\.|developers.google.com\/\+\/web\/snippet|slackbot|vkshare|w3c_validator|redditbot|applebot|flipboard|tumblr|skypeuripreview|nuzzel|discordbot|google\ page\ speed|qwantify|pinterestbot|bitrix\ link\ preview|xing-contenttabreceiver|chrome-lighthouse|telegrambot") {
                         set $prerender 1;
                 }
                 if ($args ~ "_escaped_fragment_") {
