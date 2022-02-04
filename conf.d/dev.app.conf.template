@@ -1,5 +1,5 @@
 upstream app_server {
-    server frontend:3000;
+    server frontend:5000;
 }
 
 upstream backend_server {
